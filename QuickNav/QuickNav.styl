@@ -1,0 +1,108 @@
+$base = 1 / 750 * 100vw
+
+.crm-weui-component {
+    z-index 800
+}
+.quick-nav-container
+    position relative
+    // display: none
+    .shadow
+        position fixed
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background-color rgba(0,0,0,0.5)
+        z-index 891
+
+    .nav-box
+        position fixed
+        z-index 999
+        right -530 * $base
+        left auto
+        bottom: 20%
+        height 140 * $base
+        max-height 280 * $base
+        max-width 680 * $base
+        display flex
+        justify-content center
+        align-items center
+        // width: 120 * $base
+        transition right 0.5s
+        -webkit-transition: right 0.5s
+        -moz-transition: right 0.5s
+        -o-transition: right 0.5s
+        .nav-left
+            background-color rgba(51,51,51,0.8)
+            height 80 * $base
+            width 100 * $base
+            border-top-left-radius 40 * $base
+            border-bottom-left-radius 40 * $base
+            padding  0 10 * $base
+            padding-left 15 * $base
+            .nav-icon
+                 display block
+                 height 100%
+                 width 32 * $base
+                 background url('./images/ks_r_32_icon.png') no-repeat center
+                 background-size 32 * $base 32 * $base
+                 position relative
+                 &:after
+                    content '快速导航'
+                    display table
+                    vertical-align: middle
+                    width 52 * $base
+                    height 90 % $base
+                    font-size 18 * $base
+                    line-height 40  * $base
+                    color #fff
+                    position absolute
+                    right -65 * $base
+                    top 0
+            .off
+                background url(./images/ks_l_32_icon.png) no-repeat center
+                background-size 32 * $base 32 * $base
+                &:after
+                    content '收起'
+                    top 0
+                    bottom 0
+                    line-height: 80 * $base
+
+        .nav-right
+            // width 0
+            overflow hidden
+            max-width 520 * $base
+            max-height 280 * $base
+            display flex
+            flex-wrap: wrap
+            justify-content flex-start
+            align-items center
+            border-top-left-radius 10 * $base
+            border-bottom-left-radius 10 * $base
+            background #ffffff
+            
+            div
+                width: 130 * $base
+                height 140 * $base
+                text-align: center
+                display flex
+                align-items center
+                justify-content center
+                a
+                    display inline-block
+                    width 130 * $base
+                img
+                    display inline-block
+                    height 40 * $base
+                    width 40 * $base
+                p
+                    font-size 20 * $base
+                    color #90a4ae
+                    
+@media (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2)
+  .quick-nav-container
+      .nav-box
+          .nav-left
+              .nav-icon
+                    &:after
+                        width 60 * $base 
